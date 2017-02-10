@@ -91,7 +91,7 @@
       }
     },
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2016-04-30-preview",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[parameters('virtualMachinesSetting').vmName]",
       "location": "[variables('location')]",
@@ -116,7 +116,9 @@
           },
           "osDisk": {
             "name": "[parameters('virtualMachinesSetting').osDisk.name]",
-            "vhd": { "uri": "[parameters('virtualMachinesSetting').osDisk.vhd.uri]" },
+            "managedDisk": {
+              "storageAccountType": "[parameters('virtualMachinesSetting').storageAccountType]"
+            },
             "caching": "[parameters('virtualMachinesSetting').osDisk.caching]",
             "createOption": "[parameters('virtualMachinesSetting').osDisk.createOption]"
           },

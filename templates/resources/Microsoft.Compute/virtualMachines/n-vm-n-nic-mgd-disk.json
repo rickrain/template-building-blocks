@@ -30,7 +30,7 @@
   "variables": {
     "templateUniqueString": "[uniqueString(concat(string(parameters('deploymentContext')), string(parameters('virtualMachinesSettings')), string(parameters('virtualNetworkSettings')), string(parameters('context'))))]",
     "replicatorTemplate": "[uri(deployment().properties.templateLink.uri, '../../common/replicator.json')]",
-    "singleVMTemplate": "[uri(deployment().properties.templateLink.uri, 'single-vm-n-nic.json')]",
+    "singleVMTemplate": "[uri(deployment().properties.templateLink.uri, 'single-vm-n-nic-mgd-disk.json')]",
     "vmSettingsDeploymentName": "[concat(parameters('deploymentContext').parentTemplateUniqueString, '-vmSettings-', variables('templateUniqueString'))]",
   },
   "resources": [
@@ -56,8 +56,7 @@
                 "vmNamePostFixStartIndex": "[add(parameters('context').vmStartIndex, parameters('context').deployedVMCount)]",
                 "deployedVMCount": "[parameters('context').deployedVMCount]",
                 "storageAccounts": {
-                  "diagnostic": "[parameters('context').storageAccounts.diagnostic]",
-                  "vhd": "[parameters('context').storageAccounts.vhd]"
+                  "diagnostic": "[parameters('context').storageAccounts.diagnostic]"
               },
               "availabilitySetName": "[parameters('context').availabilitySetName]"
             }

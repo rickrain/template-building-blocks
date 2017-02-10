@@ -18,8 +18,8 @@
   "variables": {
     "templateUniqueString": "[uniqueString(concat(string(parameters('deploymentContext')), string(parameters('virtualMachinesSetting'))))]",
     "avSetTemplates": [
-      "[uri(deployment().properties.templateLink.uri, 'single-vm-n-nic-no-avset.json')]",
-      "[uri(deployment().properties.templateLink.uri, 'single-vm-n-nic-avset.json')]"
+      "[uri(deployment().properties.templateLink.uri, 'single-vm-n-nic-no-avset-mgd-disk.json')]",
+      "[uri(deployment().properties.templateLink.uri, 'single-vm-n-nic-avset-mgd-disk.json')]"
     ],
     "templateToInvoke": "[variables('avSetTemplates')[mod(add(length(parameters('virtualMachinesSetting').availabilitySetName), 2), add(length(parameters('virtualMachinesSetting').availabilitySetName), 1))]]",
     "deploymentSuffixes": [
