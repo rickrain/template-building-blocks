@@ -36,8 +36,7 @@
   "variables": {
     "location": "[resourceGroup().location]",
     "templateUniqueString": "[uniqueString(concat(string(parameters('deploymentContext')), string(parameters('virtualMachinesSettings')), string(parameters('virtualNetworkSettings')), string(parameters('buildingBlockSettings')), string(parameters('context')), resourceGroup().id))]",
-    "nVirtualMachinesTemplate": "[uri(deployment().properties.templateLink.uri, 'n-vm-n-nic-mgd-disk.json')]",
-    "replicatorTemplate": "[uri(deployment().properties.templateLink.uri, '../../common/replicator.json')]"
+    "nVirtualMachinesTemplate": "[uri(deployment().properties.templateLink.uri, 'n-vm-n-nic-mgd-disk.json')]"
   },
   "resources": [
     {

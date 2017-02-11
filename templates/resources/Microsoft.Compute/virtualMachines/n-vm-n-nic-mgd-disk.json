@@ -61,7 +61,7 @@
               "availabilitySetName": "[parameters('context').availabilitySetName]"
             }
           },
-          "mapperTemplateUri": { "value": "[uri(deployment().properties.templateLink.uri, 'virtualMachines-settings.json')]" },
+          "mapperTemplateUri": { "value": "[uri(deployment().properties.templateLink.uri, 'virtualMachines-settings-mgd-disk.json')]" },
           "copies": { "value": "[parameters('context').vmCount]" }
         }
       }

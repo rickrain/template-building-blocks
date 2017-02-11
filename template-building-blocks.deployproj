@@ -133,6 +133,7 @@
     <None Include="templates\resources\Microsoft.Compute\virtualMachines\virtualMachine-datadisk.json" />
     <None Include="templates\resources\Microsoft.Compute\virtualMachines\virtualMachine-nic.json" />
     <None Include="templates\resources\Microsoft.Compute\virtualMachines\virtualMachines-nics-settings.json" />
+    <None Include="templates\resources\Microsoft.Compute\virtualMachines\virtualMachines-settings-mgd-disk.json" />
     <None Include="templates\resources\Microsoft.Compute\virtualMachines\virtualMachines-settings.json" />
     <None Include="templates\resources\Microsoft.Compute\virtualMachines\vm-per-storage-helper.json" />
     <None Include="templates\resources\Microsoft.Network\connections\connection-ExpressRoute.json" />
